@@ -6,18 +6,22 @@ function [flag] = flag_multivariate (fileIn, sheetName, max_percent_diff,flag)
 % difference between the two values is greater than an threshold then the
 % measurement is flagged according to the rules assigned in the lecture.
 
-% Syntax: [flag] = flag_multivariate (dataIn, max_percent_diff,flag)
+% Syntax: [flag] = flag_multivariate (fileIn, sheetName, max_percent_diff,flag)
 
 % Inputs:
 %  fileIn = excel spreadsheet containing the data to be assessed
+%  sheetName = Name of the specific sheet to be loaded
 %  max_percent_diff (optional) = maximum allowed difference between expected value
 %  and the reported value. If this is not specified, the 95% ci will be
 %  calculated (mean ± 1.96 std)
 %  flag (optional) = If a flag array has previously been created this can
 %  be used as an input
 
-%  Example:
+%  Example 1:
 %  [flag] = flag_multivariate ('C:\MSCL_MATLAB2.xls', '146',10,flag)
+
+%  Example 2:
+%  [flag] = flag_multivariate ('C:\MSCL_MATLAB2.xls', '146')
 
 % Outputs:
 % flag = The data will be assigned a flag which describes the status of the data. 
@@ -42,12 +46,12 @@ xData = C{:,2};
 yData = C{:,4};
 
 dlm              = fitlm(xData(:,1),yData(:,1),'Intercept',true);
-interceptCoef    = table2array(dlm.Coefficients(1,1)); % intercept
-slopeCoef        = table2array(dlm.Coefficients(2,1)); % slope
-Pvalue           = table2array(dlm.Coefficients(2,4)); % p-value
-R2               = round(dlm.Rsquared.Ordinary,2);
-predicted        = interceptCoef + slopeCoef .* xData;
-percent_diff     = ((yData - predicted)./yData).*100;
+interceptCoef    = table2array(dlm.Coefficients(1,1)); % extracts the intercept
+slopeCoef        = table2array(dlm.Coefficients(2,1)); % extracts the slope
+Pvalue           = table2array(dlm.Coefficients(2,4)); % extarcts the p-value
+R2               = round(dlm.Rsquared.Ordinary,2); % extracts the r2 value
+predicted        = interceptCoef + slopeCoef .* xData; % Predicts the y value from the x values
+percent_diff     = ((yData - predicted)./yData).*100; % calculates the percentage difference between the observed and predicted
 
 if ~exist('max_percent_diff','var')
     max_percent_diff = std(percent_diff)*1.96; % 95% ci
