@@ -1,4 +1,4 @@
-"New England", "Massachusetts", "Boston", "SuperMart",
+"Month", "size", "region", "state", "city", "outlet"
 "Feb" , 2000000, "New England", "Massachusetts", "Springfield", "SuperMart",
 "Feb" , 1400000, "New England", "Massachusetts", "Worcester", "SuperMart",
 "Feb" , 2200000, "New England", "Massachusetts", "Worcester", "SuperMart",
