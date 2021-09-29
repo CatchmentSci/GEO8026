@@ -124,11 +124,3 @@ colorbar
 title(['combined method change detected']);
 
 
-
-
-
-
-
-
-
-
