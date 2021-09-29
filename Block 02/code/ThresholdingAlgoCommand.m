@@ -1,7 +1,7 @@
 %clear all;
 
 % Data input
-y = ans;
+y = ans; % change this to the name of your variable containing the sea level data
 
 % Settings
 lag = 672; % the number of datapoints that are used within the moving window
@@ -9,7 +9,7 @@ threshold = 3.5; % magnitude of z-score
 influence = 0.2; % influence of 'bad' data on the mean of the window
 
 % Get results
-[signals,avg,dev] = ThresholdingAlgo(y,lag,threshold,influence);
+[signals,avg,dev] = ThresholdingAlgo(y,lag,threshold,influence); % this command calls the ThresholdingAlgo function which is found within the code folder
 
 figure; 
 ax1 = subplot(2,1,1); hold on;
@@ -26,8 +26,8 @@ plot(1:length(y),y,'b');
 
 ax2 = subplot(2,1,2);
 stairs(signals,'r','LineWidth',1.5); ylim([-1.5 1.5]);
-% A value of 1 indicates that the data is higher than the maximum allowed
+% A value of 1 indicates that the data is higher than the maximum allowable
 % A value of zero indicates that the data is good
-% A value of -1 indicates that the data is below the minium allowed
+% A value of -1 indicates that the data is below the minium allowable
 
 linkaxes([ax1,ax2],'x');
