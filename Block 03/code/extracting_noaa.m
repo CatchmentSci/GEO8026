@@ -1,30 +1,27 @@
-clear all; clc;
+function [dtNum,TAVG] = extracting_noaa(folderIn)
 
-% Define the working folder that you are using:
-folderIn = 'C:\Users\Matt\OneDrive - Newcastle University\Teaching\2021 - 22\GEO8026\_git\GEO8026_21_22\Practical 3\';
-
-% Download the climate data from NOAA and as it is a .tar.gz file 
+% Download the climate data from NOAA and as it is a .tar.gz file
 % (i.e. compressed), we need to unzip it before loading it into the Workspace:
 websave([folderIn 'noaa_data'] , 'https://www1.ncdc.noaa.gov/pub/data/ghcn/daily/ghcnd_gsn.tar.gz'); % Download data
 untar([folderIn 'noaa_data.gz'],[folderIn 'extractedData']) % Decompress the archive
 
-% Within the extractedData folder you will find a series of files. 
+% Within the extractedData folder you will find a series of files.
 % These are ascii files with a extension of .dly. Because the .dly extension
 % is one that MATLAB doesn't automatically recognise we need to tell it that
-% it is a text format using the 'FileType' command. Lets read a file into 
-% MATLAB. You can feel free to modify the filename as you see fit:  
+% it is a text format using the 'FileType' command. Lets read a file into
+% MATLAB. You can feel free to modify the filename as you see fit:
 C   = readtable([folderIn 'extractedData\ghcnd_gsn\FR000007650.dly'],...
-                    'Delimiter','',... % Rather than specifying a delimiter we will bring each row in as one cell. We can do this as the file is an ascii with fixed number of characters per line 
-                    'ReadVariableNames', false,... % state that the first row does not contain the variable name
-                    'FileType', 'text'); % state that it is a text file
-C   = table2cell(C); % the raw data is stored in C 
+    'Delimiter','',... % Rather than specifying a delimiter we will bring each row in as one cell. We can do this as the file is an ascii with fixed number of characters per line
+    'ReadVariableNames', false,... % state that the first row does not contain the variable name
+    'FileType', 'text'); % state that it is a text file
+C   = table2cell(C); % the raw data is stored in C
 
 % With using any secondary dataset there is likely to be some manipulation
-% that we need to do before we have it in a useable format, and have the 
-% data that we want. Reading the metadata provided with the dataset is 
-% essential and will tell you what you need to know. This can usually be 
-% found close to where the data is downloaded from and in this instance is 
-% here: https://www.ncei.noaa.gov/pub/data/ghcn/v4/readme.txt. From the 
+% that we need to do before we have it in a useable format, and have the
+% data that we want. Reading the metadata provided with the dataset is
+% essential and will tell you what you need to know. This can usually be
+% found close to where the data is downloaded from and in this instance is
+% here: https://www.ncei.noaa.gov/pub/data/ghcn/v4/readme.txt. From the
 % metadata, we can see that the 1st to 11th characters in each row contain
 % the station names. So lets extract those:
 a_func          = @(x) x(1:11); % Get characters 1 - 11 from each cell
@@ -32,14 +29,14 @@ allStations     = cellfun(a_func, C, 'UniformOutput', false); % run the command
 uniqueStations  = unique(allStations); % find unique cell names
 
 % As expected, the data file contains data from only one station. But within
-% this file there are a range of different measurements. Let's find out 
-% what these are by checking for unique element values which are stored 
+% this file there are a range of different measurements. Let's find out
+% what these are by checking for unique element values which are stored
 % in characters 18-21:
 a_func          = @(x) x(18:21); % Get characters 18 - 21 from each cell
 elements        = cellfun(a_func, C, 'UniformOutput', false); % run the command
 uniqueElements  = unique(elements); % find unique cell names
 
-% We can see that there are four variables that are stored: PRCP, TAVG, 
+% We can see that there are four variables that are stored: PRCP, TAVG,
 % TMAX, TMIN. For the purposes of this we will use TAVG.
 % The yyyy and mm of measurements is displayed in the 12th - 17th characters.
 % Let's extract that for each measurement:
@@ -74,7 +71,7 @@ remove          = find(round(dataOut) == -9999);
 dataOut(remove) = NaN;
 
 % The above code block extracts all of the measurement data and stores them
-% in a matrix where each column represents one day i.e. 1 - 31, and each 
+% in a matrix where each column represents one day i.e. 1 - 31, and each
 % row represents a combination of the elements and the month. If we want to
 % extract only the TAVG (average temperature) data we would run the following:
 temp0        = strfind(uniqueElements,'TAVG'); % search elements for those that are the TAVG
@@ -111,3 +108,4 @@ idx_rem = find(TAVG == 0);
 TAVG(idx_rem) = NaN;
 TAVG = TAVG./10;
 
+end
