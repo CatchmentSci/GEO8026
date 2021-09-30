@@ -7,7 +7,7 @@ function [flag] = flag_seasonality (dataIn, minIn, maxIn, rangeIn, flag)
 % the expected range then the flag array is modified according to the rules 
 % assigned in the lecture.
 
-% Syntax: [flag] = flag_gross_range (dataIn, minIn, maxIn, rangeIn flag)
+% Syntax: [flag] = flag_seasonality (dataIn, minIn, maxIn, rangeIn flag)
 
 % Inputs:
 %  dataIn = the array containing the data to be assessed. It should be a

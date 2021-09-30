@@ -5,13 +5,15 @@ function [flag] = flag_attenuated_signal_several (dataIn, min_std, sample_num, f
 % expected a flag is returned according to the rules assigned in the 
 % lecture.
 
-% Syntax: [flag] = flag_attenuated_signal (dataIn, min_abs_change,flag)
+% Syntax: [flag] = flag_attenuated_signal_several (dataIn, min_std, sample_num, flag)
 
 % Inputs:
 %  dataIn = the array containing the data to be assessed. It should be a
 %  nx1 array i.e. one collumn
-%  min_abs_change = minimum expected change from between adjacent
-%  measurements
+%  min_std = the minimum allowable standard deviation for the specified
+%  window (defined by sample_num)
+%  sample_num = the number of samples that are evaulated to determine the
+%  standard deviation. This is the size of the moving window. 
 %  flag (optional) = If a flag array has previously been created this can
 %  be used as an input
 
