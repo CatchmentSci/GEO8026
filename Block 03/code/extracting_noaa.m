@@ -11,7 +11,7 @@ untar([folderIn 'noaa_data.gz'],[folderIn 'extractedData']) % Decompress the arc
 % it is a text format using the 'FileType' command. Lets read a file into
 % MATLAB. You can feel free to modify the filename as you see fit:
 C   = readtable([folderIn 'extractedData\ghcnd_gsn\FR000007650.dly'],...
-    'Delimiter','',... % Rather than specifying a delimiter we will bring each row in as one cell. We can do this as the file is an ascii with fixed number of characters per line
+    'Delimiter','*',... % Rather than specifying a delimiter we will bring each row in as one cell. We can do this as the file is an ascii with fixed number of characters per line
     'ReadVariableNames', false,... % state that the first row does not contain the variable name
     'FileType', 'text'); % state that it is a text file
 C   = table2cell(C); % the raw data is stored in C
