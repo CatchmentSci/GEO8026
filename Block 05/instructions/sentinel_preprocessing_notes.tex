@@ -1,0 +1,107 @@
+\documentclass[11pt,onecolumn,a4paper,notitlepage]{article}
+\usepackage[margin=2cm]{geometry}
+%\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows}
+\usepackage{graphicx}
+\usepackage{tcolorbox}
+\usepackage{xurl}
+\usepackage{fancyhdr}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+            
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily,
+  showstringspaces=false,
+  commentstyle=\color{red},
+  keywordstyle=\color{blue},
+  breaklines=true                % sets automatic line breaking
+}  
+
+\makeatletter
+\def\lst@lettertrue{\let\lst@ifletter\iffalse}
+\makeatother
+  
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[L]{Modified on: \today} 
+\fancyfoot[R]{Page \thepage} 
+
+
+\begin{document}
+
+% options for every upcomming tcolorbox environment
+\tcbset{sidebyside,
+  size=minimal,
+  width=\textwidth,
+  colback=white,
+  lower separated=false, % no visible separation
+  halign lower=flush right, % right side
+  frame empty % no borders
+}
+
+
+\begin{tcolorbox}[ halign upper=flush center] % upper = left side
+	\large \textsc{Newcastle University}
+	\vspace{0.25cm}
+	\\
+	{\huge {\textbf{GEO8026}}}
+	\\
+	\vspace{0.25cm}
+	\textbf{Data analysis for Geoscience}
+	\tcblower  %left right separation
+	\includegraphics[width=2in]{logo.png}
+\end{tcolorbox}
+
+\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Sentinel pre-processing notes}
+
+\begin{itemize}
+\item {Download the required Sentinel 2 imagery from the Copernicus Hub}
+
+\item {Extract the zip folder and place it in a convenient location of your computer}
+
+\item {You will find the bands that are of 10m resolution located within the following subfolder of the folder you have just unzipped, e.g.:
+
+\begin{lstlisting}[language=bash]
+…\GRANULE\<file_name>\IMG_DATA\R10m\
+\end{lstlisting}
+}
+
+\item {Install GDAL on your machine following the instructions provided at: \url{https://sandbox.idre.ucla.edu/sandbox/tutorials/installing-gdal-for-windows}
+
+\item{Upon successful installation, load the Windows command prompt (or equivalent in Mac OS), and navigate to the folder where the imagery has been downloaded to using the cd command. For example:
+ 
+\begin{lstlisting}[language=bash]
+cd C:\_git_local\GEO8026_22_23\Block 05\data\kenya\S2A_MSIL2A_20210607T073611_N0300_R092_T36MZE_20210607T101427.SAFE\GRANULE\L2A_T36MZE_A031120_20210607T075618\IMG_DATA\R10m
+\end{lstlisting}
+}
+
+\item {Now that we are in the folder where the imagery is stored, we can now convert each band from jp2 to .tif one at a time using a command in the following format:
+\begin{lstlisting}[language=bash]
+gdal_translate inputfile.jp2 outputfile.tif
+\end{lstlisting}
+}
+
+\item {An example of this in practice is:
+\begin{lstlisting}[language=bash]
+gdal_translate T36MZE_20210607T073611_B04_10m.jp2 B04.tif
+\end{lstlisting}
+
+\item {We need to do this for each band that we are interested in loading. This is often bands 4, 3, 2, and 8, which represent red, green, blue, and near infrared respectively}
+
+\item {You have now extracted the individual bands and these can now be loaded into MATLAB.}
+
+\end{itemize}
+
+
+
+
+\end{document}
