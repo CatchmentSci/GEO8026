@@ -1,2 +1,2 @@
-# GEO8026_21_22
-Repository containing the necessary files for GEO8026 (Data analysis for Geoscience) in the AY 21/22
+# GEO8026_22_23
+Repository containing the necessary files for GEO8026 (Data analysis for Geoscience) in the AY 22/23
