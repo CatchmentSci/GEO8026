@@ -1,9 +1,7 @@
 <p align="center"> 
-  <img src="/Block 01/instructions/latex/logo.png" alt="NCL Logo" width="150px" height="150px">
+  <img src="/Block 01/instructions/latex/logo.png" alt="NCL Logo" width="200px">
 </p>
-<h1 align="center"> GEO8026 </h1>
-<h3 align="center"> Data analysis for Geoscience </h3>  
-
+<h3 align="center"> GEO8026: Data analysis for Geoscience </h3>  
 </br>
 
 <!-- TABLE OF CONTENTS -->
@@ -25,7 +23,9 @@
 <h2 id="about-the-repository"> :pencil: About The Repository</h2>
 
 <p align="justify"> 
-This repository provides a range of teaching materials developed for the MRes Environmental Geosciences degree at Newcastle University. Specifically, this repository provides the necessary materials for students undertaking the modeule "GEO8026: Data analysis for Geosciences". The module is designed to provide students with working knowledge of software widely-used for numerical analysis in the Geosciences and within a range of industries (e.g. data science, engineering). By the end of the module, students will be equipped with knowledge and skills to be able to organise, query, analyse and display environmental datasets. This skillset will be developed through the completion of practical exercises using research datasets acquired from across the sub-disciplines of the geosciences. Following acquisition of the core skills, students will apply their knowledge to solve realworld problems.
+This repository provides a range of teaching materials developed for the MRes Environmental Geosciences degree at Newcastle University. Specifically, this repository provides the necessary materials for students undertaking the "GEO8026: Data analysis for Geosciences" module. Materials presented in this repository only relate to the 1st part of the module which is focussed on the use of MATLAB.
+	
+The module is designed to provide students with working knowledge of software widely-used for numerical analysis in the Geosciences and within a range of industries (e.g. data science, engineering). By the end of the module, students will be equipped with knowledge and skills to be able to organise, query, analyse and display environmental datasets. This skillset will be developed through the completion of practical exercises using research datasets acquired from across the sub-disciplines of the geosciences. Following acquisition of the core skills, students will apply their knowledge to solve realworld problems.
 </p>
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
