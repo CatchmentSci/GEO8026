@@ -36,6 +36,7 @@ This repository provides a range of teaching materials developed for the MRes En
 [![Made with MATLAB](https://img.shields.io/badge/Made%20with-MATLAB-orange?style=for-the-badge&logo=MATLAB)](https://www.mathworks.com/products/matlab.html) <br>
 
 This project requires MATLAB 2019a, or later in addition to the following packages:
+* Communications Toolbox
 * Curve Fitting Toolbox
 * Image Processing Toolbox
 * Mapping Toolbox
