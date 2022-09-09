@@ -1,0 +1,134 @@
+\documentclass[11pt,onecolumn,a4paper,notitlepage]{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows}
+\usepackage{graphicx}
+\usepackage{tcolorbox}
+\usepackage{xurl}
+\usepackage{fancyhdr}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+            
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily,
+  showstringspaces=false,
+  commentstyle=\color{red},
+  keywordstyle=\color{blue}
+}
+
+
+\usepackage[numbered,framed]{matlab-prettifier}
+
+\let\ph\mlplaceholder % shorter macro
+\lstMakeShortInline"
+
+\lstset{
+  style              = Matlab-editor,
+  basicstyle         = \mlttfamily,
+  escapechar         = ",
+  mlshowsectionrules = true,
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[L]{Modified on: \today} 
+\fancyfoot[R]{Page \thepage} 
+
+
+\begin{document}
+
+
+% options for every upcomming tcolorbox environment
+\tcbset{sidebyside,
+  size=minimal,
+  width=\textwidth,
+  colback=white,
+  lower separated=false, % no visible separation
+  halign lower=flush right, % right side
+  frame empty, % no borders
+}
+
+
+\begin{tcolorbox}[ halign upper=flush center] % upper = left side
+	\large \textsc{Newcastle University}
+	\vspace{0.25cm}
+	\\
+	{\huge {\textbf{GEO8026}}}
+	\\
+	\vspace{0.25cm}
+	\textbf{Data analysis for Geoscience}
+	\tcblower  %left right separation
+	\includegraphics[width=2in]{logo.png}
+\end{tcolorbox}
+
+\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+\section*{Preparing for submission}
+\end{center}
+
+\subsection*{1.	Uploading your data}
+
+\noindent You will provide the data used to generate the information presented in your portfolio. This is required so that your workings can be reproduced. You will store the data used on your OneDrive account. To do this, you should complete the following steps:
+\bigskip
+
+\begin{enumerate}
+\item{Place all of your datasets into a folder on your OneDrive account.}
+\item{Next, zip the folder using 7Zip, or other zipping software. The zipped folder should be in the format of .zip.}
+\item{You should ensure that this zipped folder stays in this location on your OneDrive account until you have received feedback on your portfolio submission.}
+\item{Once the zipped folder has been sync'd to your OneDrive account, you can then generate a shareable link so that this data can accessed and downloaded by other people. This can be achieved by:}
+
+\begin{itemize}
+\item{Navigating to the location of the zipped folder in your OneDrive directory}
+\item{Right clicking on the .zip folder and then 'Share'}
+\item{Modify the link settings so that 'anyone with the link' can access but \textbf{do not allow editing privileges}}
+\item{Generate a link to the folder and copy the link address. It will look something like this:}
+\end{itemize}
+\end{enumerate}
+
+\url{https://newcastle-my.sharepoint.com/:u:/g/personal/nmp65_newcastle_ac_uk/Eftugi0tFOZFiAD6dYaolMIBc-ef7nbshavfZq-uK7FEJg?e=p6lqQ4}
+\bigskip
+
+\noindent
+Copy the link that has been generated and make a note of it. To enable someone to direct download the .zip from within MATLAB, the link needs to be edited slightly. The characters after the ? should be removed and replaced with download=1. In the example of the url above this would be modified to read:
+
+\bigskip
+\url{https://newcastle-my.sharepoint.com/:u:/g/personal/nmp65_newcastle_ac_uk/Eftugi0tFOZFiAD6dYaolMIBc-ef7nbshavfZq-uK7FEJg?download=1}
+
+\subsection*{2.	Uploading your code}
+\noindent All of the scripts used in the production of your portfolio should be uploaded to your GitHub account and should be placed in a format/structure so that it is clear what each of the functions are to be used for. You can use the `Readme' file within your GitHub repository to guide the marker/user to the appropriate files for each part of the assignment.
+
+\bigskip
+\noindent Your GitHub repository should be private, and shared with the user CatchmentSci following the instructions provided \href{https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository}{here}.
+
+\subsection*{3.	Ensuring your code can access the data}
+
+\noindent
+The zipped folder that you uploaded to your OneDrive account can be downloaded and unzipped using a series of MATLAB commands. Here we will illustrate how this can be achieved.
+
+\bigskip
+\noindent
+Performing the download within the MATLAB environment makes sense as the user can define the location explicitly.
+
+\bigskip
+\noindent
+One way of doing this is to write a function that enables the user to specify the saved location as an input, which we can then subsequently call. An example of such a function can be found below:
+
+\bigskip
+\lstinputlisting{./matlab_code_01.m}
+
+\bigskip
+\noindent
+The above function (modified with the correct url for your data) should be called first and foremost from your MATLAB scripts so that the data is downloaded using the MATLAB environment.
+
+\bigskip
+\noindent
+Subsequently, when your code seeks to access the downloaded datasets, they should be pointed to through the use of the workingDir variable and the use of relative paths (i.e. the location where the data has been stored locally).
+
+\end{document}

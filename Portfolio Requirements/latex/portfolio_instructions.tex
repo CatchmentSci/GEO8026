@@ -1,0 +1,137 @@
+\documentclass[11pt,onecolumn,a4paper,notitlepage]{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows}
+\usepackage{graphicx}
+\usepackage{tcolorbox}
+\usepackage{xurl}
+\usepackage{fancyhdr}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+\usepackage{enumitem}
+            
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily,
+  showstringspaces=false,
+  commentstyle=\color{red},
+  keywordstyle=\color{blue}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[L]{Modified on: \today} 
+\fancyfoot[R]{Page \thepage} 
+
+
+\begin{document}
+
+% options for every upcomming tcolorbox environment
+\tcbset{sidebyside,
+  size=minimal,
+  width=\textwidth,
+  colback=white,
+  lower separated=false, % no visible separation
+  halign lower=flush right, % right side
+  frame empty, % no borders
+}
+
+
+\begin{tcolorbox}[ halign upper=flush center] % upper = left side
+	\large \textsc{Newcastle University}
+	\vspace{0.25cm}
+	\\
+	{\huge {\textbf{GEO8026}}}
+	\\
+	\vspace{0.25cm}
+	\textbf{Data analysis for Geoscience}
+	\tcblower  %left right separation
+	\includegraphics[width=2in]{logo.png}
+\end{tcolorbox}
+
+\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\section*{Portfolio 1 Requirements}
+\end{center}
+
+\noindent
+In this portfolio you should demonstrate your competence of working with geoscientific datasets in MATLAB. 
+\bigskip
+
+\noindent You may choose to use one, or more, datasets to illustrate your competence at handling and analysing geoscientific data.
+\bigskip
+
+\noindent The portfolio is split into four parts. The requirements for each of these parts are described below:
+\bigskip
+
+\subsection*{Part A: Geographical context}
+
+\begin{enumerate}
+\item Using satellite imagery, produce Figure(s) indicating the location(s) of where the data used in this portfolio has been acquired from. Feel free to incorporate additional layer annotations, symbols, etc.
+\item Briefly describe the study site, the sampling locations, and any other relevant features present within the imagery.
+\end{enumerate}
+
+\subsection*{Part B: Testing for consistency}
+
+\begin{enumerate}[resume]
+\item{Check for consistency in measurement intervals, identify any missing observations and treat appropriately.}
+\item{Describe the approach that you adopted to test for consistency. The decisions you make should be reasonable and fully justified. Evaluate the success your adopted approach, discuss limitations, and identify ways of enhancing your methodology.}
+\end{enumerate}
+
+
+\subsection*{Part C: Quality Control}
+\begin{enumerate}[resume]
+
+\item{Assess the quality of your data. Ensure that your functions are capable of identifying and removing questionable measurements (i.e. potential errors), and measurements of interest (e.g. rapid changes).}
+\item{As appropriate, remove questionable observations from the data series and infill using method(s) of your choosing e.g. through interpolation or setting as NaN.}
+\item{Describe your workflow (i.e. the tests that you have conducted, the reasons for choosing the selected parameters), the outputs of the tests, and evaluate the success of the analysis.}
+\end{enumerate}
+
+
+\subsection*{Part D: Data Analysis}
+
+\begin{enumerate}[resume]
+\item{Perform exploratory data analysis. This may involve application of some of the following approaches. However, this list is not exhaustive and you should feel free to perform additional analysis as appropriate:} 
+
+\begin{itemize}
+\item{Extract and present summary statistics that describe the data series.}
+\item{Assess how the environmental variable of interest varies over time/space.}
+\item{To extract the signal of interest, you may choose to filter (low-pass or high-pass) the data.}
+\item{Explore the relationship(s) between the variable of interest and independent variable(s).}
+\item{Assess uncertainty in the established relationships.}
+\end{itemize}
+
+\end{enumerate}
+
+
+\subsection*{Additional Guidance}
+
+\noindent The word limit of the portfolio is 2000 words, not including references and figure/table captions. See the module word limit policy in the Module Handbook for further information.
+\bigskip
+
+\noindent 
+The submission deadline for the portfolio is 23rd November at 12 noon. The submission should be made via Turnitin on Canvas (see Module Handbook for further information).
+\bigskip
+
+\noindent 
+The use of Figures is encouraged throughout the portfolio submission. All figures and results presented in the portfolio should be reproducible using scripts and functions present in your GitHub repository. Further information on how to do this can be found in the \href{}{Preparing for Submission document}.
+\bigskip
+
+\noindent 
+It is expected that you will use references to the wider literature in this portfolio, especially when seeking to justify and evaluate the approaches adopted.
+\bigskip
+
+\noindent If you have any questions related to the submission, please contact matthew.perks@ncl.ac.uk.
+
+\bigskip
+
+\noindent 
+If you wish to discuss the requirements of the portfolio in person, a meeting can be requested \href{https://bit.ly/36YS3oW}{here}.
+
+
+\end{document}
