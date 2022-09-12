@@ -60,13 +60,13 @@ Below is the outline of the folder structure within this repository  with descri
     ├── Block 01                # folder containing introductory challenges
     │   ├── data                # subfolder containing example file formats
     │   ├── instructions        # subfolder containing three instruction files
-    │   │   ├── latex           	# latex files (not needed)
-	│   ├── slides          	# lecture slides
+    │   │   ├── latex           # latex files (not needed)
+	│   ├── slides              # lecture slides
     ├── Block 02	
     │   ├── code                # code called by the .mlx files in the instructions subfolder
     │   ├── data                # subfolder containing example data
     │   ├── instructions        # subfolder containing two instruction files
-	│   ├── slides          # lecture slides
+	│   ├── slides              # lecture slides
     ├── Block 03	
     │   ├── code                # code called by the .mlx files in the instructions subfolder
     │   ├── data                # subfolder containing example data
@@ -75,7 +75,7 @@ Below is the outline of the folder structure within this repository  with descri
     │   ├── code                # code called by the .mlx files in the instructions subfolder
     │   ├── data                # subfolder containing example data
     │   ├── instructions        # subfolder containing one instruction file
-	│   ├── slides          # lecture slides
+	│   ├── slides              # lecture slides
     ├── Block 05	
     │   ├── data                # subfolder containing example data
     │   │   ├── calbuco         # example trail camera imagery
@@ -83,9 +83,9 @@ Below is the outline of the folder structure within this repository  with descri
     │   │   ├── iceland         # example Planet imagery
     │   │   ├── kenya           # example sentinel imagery	
     │   ├── instructions        # subfolder containing four instruction files and one note file	
-	│   │   ├── latex       # latex files (not needed)
-    ├── Example Datasets	# folder containing example data
-    ├── Portfolio Requirements	# folder containing documents outling the assessment requirements   
+	│   │   ├── latex           # latex files (not needed)
+    ├── Example Datasets	    # folder containing example data
+    ├── Portfolio Requirements  # folder containing documents outling the assessment requirements   
  
   
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
