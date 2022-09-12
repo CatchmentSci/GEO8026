@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.7.4)  9 SEP 2022 17:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.7.4)  13 SEP 2022 00:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./preparing_for_submission.tex
-(preparing_for_submission.tex
+**./_02_preparing_for_submission.tex
+(_02_preparing_for_submission.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24>
 (C:\Program Files\MiKTeX 2.9\tex/latex/base\article.cls
@@ -633,8 +633,9 @@ Package Listings Info: Made " a short reference for \lstinline on input line 27
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count308
 \l__pdf_internal_box=\box71
-) (preparing_for_submission.aux)
-\openout1 = `preparing_for_submission.aux'.
+)
+No file _02_preparing_for_submission.aux.
+\openout1 = `_02_preparing_for_submission.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
 LaTeX Font Info:    ... okay on input line 42.
@@ -654,7 +655,6 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
 LaTeX Font Info:    ... okay on input line 42.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 42.
 LaTeX Font Info:    ... okay on input line 42.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -728,9 +728,8 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 42.
 LaTeX Info: Redefining \pageref on input line 42.
 LaTeX Info: Redefining \nameref on input line 42.
- (preparing_for_submission.out) (preparing_for_submission.out)
 \@outlinefile=\write4
-\openout4 = `preparing_for_submission.out'.
+\openout4 = `_02_preparing_for_submission.out'.
 
 \c@lstlisting=\count316
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -744,8 +743,7 @@ File: logo.png Graphic file (type png)
 <use logo.png>
 Package pdftex.def Info: logo.png  used on input line 65.
 (pdftex.def)             Requested size: 144.54pt x 47.57143pt.
-
-[1
+ [1
 
 {C:/Users/nmp65/AppData/Local/MiKTeX/2.9/fonts/map/pdftex/pdftex.map} <./logo.p
 ng>]
@@ -786,22 +784,28 @@ Package textcomp Info: Symbol \textminus not provided by
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 12.
-) [2] (preparing_for_submission.aux)
+) [2] (_02_preparing_for_submission.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package rerunfilecheck Info: File `preparing_for_submission.out' has not change
-d.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+Package rerunfilecheck Warning: File `_02_preparing_for_submission.out' has cha
+nged.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `_02_preparing_for_submission.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 24100 strings out of 478593
- 467223 string characters out of 2852335
- 868999 words of memory out of 3000000
+ 24094 strings out of 478593
+ 466932 string characters out of 2852335
+ 868915 words of memory out of 3000000
  41869 multiletter control sequences out of 15000+600000
  475524 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 100i,11n,104p,435b,1405s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 100i,11n,104p,439b,1405s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc} <C:\Users\nmp65\App
 Data\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Progra
 m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/
@@ -811,7 +815,7 @@ s/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
 ublic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
 sfonts/cm/cmtt10.pfb><C:/Users/nmp65/AppData/Roaming/MiKTeX/2.9/fonts/type1/ber
 a/fvmr8a.pfb>
-Output written on preparing_for_submission.pdf (2 pages, 417582 bytes).
+Output written on _02_preparing_for_submission.pdf (2 pages, 417584 bytes).
 PDF statistics:
  103 PDF objects out of 1000 (max. 8388607)
  32 named destinations out of 1000 (max. 500000)

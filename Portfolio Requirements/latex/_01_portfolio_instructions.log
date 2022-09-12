@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.7.4)  9 SEP 2022 17:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.7.4)  13 SEP 2022 00:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./portfolio_instructions.tex
-(portfolio_instructions.tex
+**./_01_portfolio_instructions.tex
+(_01_portfolio_instructions.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24>
 (C:\Program Files\MiKTeX 2.9\tex/latex/base\article.cls
@@ -624,8 +624,9 @@ Package: listings 2020/03/24 1.8d (Carsten Heinz)
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count307
 \l__pdf_internal_box=\box72
-) (portfolio_instructions.aux)
-\openout1 = `portfolio_instructions.aux'.
+)
+No file _01_portfolio_instructions.aux.
+\openout1 = `_01_portfolio_instructions.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
 LaTeX Font Info:    ... okay on input line 30.
@@ -645,7 +646,6 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
 LaTeX Font Info:    ... okay on input line 30.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 30.
 LaTeX Font Info:    ... okay on input line 30.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -719,9 +719,8 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 30.
 LaTeX Info: Redefining \pageref on input line 30.
 LaTeX Info: Redefining \nameref on input line 30.
- (portfolio_instructions.out) (portfolio_instructions.out)
 \@outlinefile=\write4
-\openout4 = `portfolio_instructions.out'.
+\openout4 = `_01_portfolio_instructions.out'.
 
 \c@lstlisting=\count315
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -743,24 +742,30 @@ ng>]
 Package hyperref Warning: Suppressing link with empty target on input line 122.
 
 
-[2] (portfolio_instructions.aux)
-Package rerunfilecheck Info: File `portfolio_instructions.out' has not changed.
+[2] (_01_portfolio_instructions.aux)
 
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Warning: File `_01_portfolio_instructions.out' has chang
+ed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `_01_portfolio_instructions.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 23817 strings out of 478593
- 464260 string characters out of 2852335
- 736161 words of memory out of 3000000
+ 23811 strings out of 478593
+ 463981 string characters out of 2852335
+ 735984 words of memory out of 3000000
  41620 multiletter control sequences out of 15000+600000
  474456 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 100i,11n,104p,433b,440s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 100i,11n,104p,437b,440s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\nmp65\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\
 tcrm1095.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.
 pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:
 /Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on portfolio_instructions.pdf (2 pages, 369206 bytes).
+Output written on _01_portfolio_instructions.pdf (2 pages, 368984 bytes).
 PDF statistics:
  59 PDF objects out of 1000 (max. 8388607)
  17 named destinations out of 1000 (max. 500000)
