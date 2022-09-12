@@ -61,12 +61,12 @@ Below is the outline of the folder structure within this repository  with descri
     │   ├── data                # subfolder containing example file formats
     │   ├── instructions        # subfolder containing three instruction files
     │   │   ├── latex           # latex files (not needed)
-	│   ├── slides              # lecture slides
+	│   ├── slides          # lecture slides
     ├── Block 02	
     │   ├── code                # code called by the .mlx files in the instructions subfolder
     │   ├── data                # subfolder containing example data
     │   ├── instructions        # subfolder containing two instruction files
-	│   ├── slides              # lecture slides
+	│   ├── slides          # lecture slides
     ├── Block 03	
     │   ├── code                # code called by the .mlx files in the instructions subfolder
     │   ├── data                # subfolder containing example data
@@ -75,7 +75,7 @@ Below is the outline of the folder structure within this repository  with descri
     │   ├── code                # code called by the .mlx files in the instructions subfolder
     │   ├── data                # subfolder containing example data
     │   ├── instructions        # subfolder containing one instruction file
-	│   ├── slides              # lecture slides
+	│   ├── slides          # lecture slides
     ├── Block 05	
     │   ├── data                # subfolder containing example data
     │   │   ├── calbuco         # example trail camera imagery
@@ -83,7 +83,9 @@ Below is the outline of the folder structure within this repository  with descri
     │   │   ├── iceland         # example Planet imagery
     │   │   ├── kenya           # example sentinel imagery	
     │   ├── instructions        # subfolder containing four instruction files and one note file	
-	│   │   ├── latex           # latex files (not needed)
+	│   │   ├── latex       # latex files (not needed)
+    ├── Example Datasets	# folder containing example data
+    ├── Portfolio Requirements	# folder containing documents outling the assessment requirements   
  
   
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
@@ -93,7 +95,7 @@ Below is the outline of the folder structure within this repository  with descri
 <p align="justify"> 
   
 * Either download, or clone this repository to the hard drive on your PC.
-* Work through each block in sequence, starting with the lecture slides and practical slides (where relevant), before working through each of the instructions documents in sequence (i.e. start at '01_', then '02_', etc.)
+* Work through each block in sequence, starting with the lecture slides and practical slides (where relevant), before working through each of the instructions documents in sequence (i.e. start at '_01_', then '_02_', etc.)
 
 </p>
 
