@@ -39,6 +39,10 @@ if flag_new(cell_bad) == 1 | 2
     flag_new(cell_bad) = 4; % overwrite it as being bad
 end
 
+% replace not checked with checked
+temp            = find(flag_new==2);
+flag_new(temp)  = 1;
+
 flag = flag_new; % replace the data in the var flag with flag_new 
 
 end
