@@ -75,12 +75,12 @@
 \end{lstlisting}
 }
 
-\item {Install GDAL on your machine following the instructions provided at: \url{https://sandbox.idre.ucla.edu/sandbox/tutorials/installing-gdal-for-windows}
+\item {Install GDAL on your machine following the instructions provided at: \url{https://sandbox.idre.ucla.edu/sandbox/tutorials/installing-gdal-for-windows}}
 
-\item{Upon successful installation, load the Windows command prompt (or equivalent in Mac OS), and navigate to the folder where the imagery has been downloaded to using the cd command. For example:
+\item {Upon successful installation, load the Windows command prompt (or equivalent in Mac OS), and navigate to the folder where the imagery has been downloaded to using the cd command. For example:
  
 \begin{lstlisting}[language=bash]
-cd C:\_git_local\GEO8026_22_23\Block 05\data\kenya\S2A_MSIL2A_20210607T073611_N0300_R092_T36MZE_20210607T101427.SAFE\GRANULE\L2A_T36MZE_A031120_20210607T075618\IMG_DATA\R10m
+cd C:\_git_local\GEO8026_23_24\Block 05\data\kenya\S2A_MSIL2A_20210607T073611_N0300_R092_T36MZE_20210607T101427.SAFE\GRANULE\L2A_T36MZE_A031120_20210607T075618\IMG_DATA\R10m
 \end{lstlisting}
 }
 
@@ -94,6 +94,7 @@ gdal_translate inputfile.jp2 outputfile.tif
 \begin{lstlisting}[language=bash]
 gdal_translate T36MZE_20210607T073611_B04_10m.jp2 B04.tif
 \end{lstlisting}
+}
 
 \item {We need to do this for each band that we are interested in loading. This is often bands 4, 3, 2, and 8, which represent red, green, blue, and near infrared respectively}
 
