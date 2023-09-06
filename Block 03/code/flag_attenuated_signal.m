@@ -9,7 +9,7 @@ function [flag] = flag_attenuated_signal (dataIn, min_abs_change,flag)
 
 % Inputs:
 %  dataIn = the array containing the data to be assessed. It should be a
-%  nx1 array i.e. one collumn
+%  nx1 array i.e. one column
 %  min_abs_change = minimum expected change from between adjacent
 %  measurements
 %  flag (optional) = If a flag array has previously been created this can
