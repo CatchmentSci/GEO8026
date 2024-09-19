@@ -4,6 +4,8 @@ clear XData_mod YData_mod
 yData = randperm(1000,200);
 xData = sqrt(yData); % generate random x-axis data
 xData = awgn( xData , 25, 'measured' );
+xData = xData(find(xData>0));
+yData = yData(find(xData>0));
 
 % Run a linear regression
 [xData,yData]       = prepareCurveData(xData,yData); % checks for and removes NaN
